@@ -29,12 +29,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-
-assets:
+  assets:
     - assets/images/
-
-fonts:
+  fonts:
     - family: Red Hat Display
       fonts:
         - asset: assets/fonts/RedHatDisplay-Regular.ttf

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:learnio/ui/pages/onboarding1.dart';
 import 'package:learnio/ui/pages/undefinedScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,16 +10,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences prefs;
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  SharedPreferences.getInstance().then((prefs) {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-        .then((value) => runApp(
-              RestartWidget(
-                child: MyApp(),
-              ),
-            ));
-  });
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  // SharedPreferences.getInstance().then((prefs) {
+  //   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+  //       .then((value) => runApp(
+  //             RestartWidget(
+  //               child: MyApp(),
+  //             ),
+  //           ));
+  // });
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -27,27 +29,27 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  void getLoginStatus() async {
-    prefs = await SharedPreferences.getInstance();
-    globals.gAuth.googleSignIn.isSignedIn().then((value) {
-      prefs.setBool("isLoggedin", value);
-    });
-  }
+  // void getLoginStatus() async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   globals.gAuth.googleSignIn.isSignedIn().then((value) {
+  //     prefs.setBool("isLoggedin", value);
+  //   });
+  // }
 
   @override
   void initState() {
-    getLoginStatus();
+    // getLoginStatus();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
-      onGenerateRoute: router.generateRoute,
-      onUnknownRoute: (settings) => CupertinoPageRoute(
-          builder: (context) => UndefinedScreen(
-                name: settings.name,
-              )),
+    return MaterialApp(
+      // onGenerateRoute: router.generateRoute,
+      // onUnknownRoute: (settings) => CupertinoPageRoute(
+      //     builder: (context) => UndefinedScreen(
+      //           name: settings.name,
+      //         )),
       // theme: Provider.of<ThemeModel>(context).currentTheme,
       debugShowCheckedModeBanner: false,
       home: Onboarding(),
