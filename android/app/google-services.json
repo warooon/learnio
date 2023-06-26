@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937458765186",
+    "project_id": "learnio-ecce4",
+    "storage_bucket": "learnio-ecce4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937458765186:android:1c7ce85f7fdde6d461139b",
+        "android_client_info": {
+          "package_name": "com.example.elearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937458765186-3hjqpl7bps4o248v11r6v5bb3jchnc9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGRlfxtuK06YaeLqDIsWyxMiLLNsa7p_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937458765186-3hjqpl7bps4o248v11r6v5bb3jchnc9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
